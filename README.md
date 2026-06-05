@@ -2,6 +2,10 @@
 
 A minimalist, high-performance command-line utility multiplexer written in pure C. Inspired by BusyBox, `bithbox` packs standard system commands into a single binary executable, saving disk space and optimizing execution through smart `argv[0]` evaluation.
 
+## Preview
+
+[![bithbox Preview](https://i.hizliresim.com/kpamq0g.gif)](https://hizliresim.com/kpamq0g)
+---
 ## How It Works
 
 Instead of compiling separate binaries for every system tool, `bithbox` compiles into a single executable. Symbolic links (symlinks) like `ls`, `cat`, and `echo` point directly to this binary.
@@ -9,12 +13,7 @@ Instead of compiling separate binaries for every system tool, `bithbox` compiles
 When invoked, `bithbox` reads the command name from `argv[0]`, shifts the argument vector, and transparently routes execution to the correct internal applet function.
 
 ---
-
-## Preview
-
-[![bithbox Preview](https://i.hizliresim.com/kpamq0g.gif)](https://hizliresim.com/kpamq0g)
----
-
+
 ## Features
 
 - **Zero External Dependencies:** Built using pure C and standard POSIX headers.
